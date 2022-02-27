@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css");
+
+/* Breadcrumb */
+
+.banner {
+    position: relative;
+    text-align: center;
+    padding:150px 0px 90px 0px;
+    overflow: hidden;
+}
+
+.banner::before{
+    content: '';   
+    position: absolute;   
+    top: 0;   
+    height: 100%;   
+    width: 100%;   
+    opacity: .6;     
+    right: 0;    
+    left: 0; 
+    z-index:0;
+    background: linear-gradient(135deg, #ffdee9 0%,#c8fff4  100%), url(./../../assets/images/banner/6.jpg);
+}
+
+.banner::after {
+    content: ''; 
+    z-index:0;
+    background: url(./../../assets/images/banner/2.png);
+    background-size: auto;   
+    position: absolute;   
+    height: 100%;   
+    width: 100%;   
+    background-repeat: no-repeat;
+    right: 0;   
+    top: 0;   
+    z-index: 1;   
+    background-position: center right; 
+    background-size: contain;
+}
+
+.banner ul { 
+    padding-left: 0px;
+}
+
+.banner ul li {    
+    display: inline-block;
+}
+
+.banner .item-center li a {    
+    color: #6a6a8e;    
+    font-size: 16px;    
+    font-weight: 400;    
+    padding-right: 6px;  
+    display: inline-block;
+}
+
+.item-center, .bread-title{
+    position: relative;
+}
+
+
+.banner .item-center li + li::before {
+    font-size: 5px;
+    font-family: 'Font Awesome 5 Free';
+    content: "\f111";
+    font-weight: bold;
+    margin: 0 10px 0 0;
+    position: relative;
+    top: -3px;
+}
+
+.bread-title h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #050748;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 47px;
+    margin: 15px 0 0 0;
+}
+
+/* Blog content */
+.blog-page {
+    padding-bottom: 80px;
+
+}
+
+.card-item {
+    /* display: flex; */
+    margin-top: 50px;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+}
+
+.item-image {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    padding-right: 12px;
+    border-radius: 8px;
+    max-width: 370px;
+    max-height: 270px;
+    width: auto;
+    height: auto;
+    box-shadow: 0 3.4px 2.7px -30px rgb(0 0 0 / 6%), 0 8.2px 8.9px -30px rgb(0 0 0 / 7%), 0 25px 40px -30px rgb(0 0 0 / 20%);
+}
+
+.item-images img{
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding: auto;
+    align-items: center;
+}
+
+.hover-scale img{
+    transform: scale(1.0);
+    transition: 1.2s cubic-bezier(.17, .85, .438, .99);
+}
+.hover-scale:hover img {transform: scale(1.05);}
+
+.category-blog{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.item-info {
+    max-width: 370px;
+    height: max-content;
+    margin-right: 10px;
+
+}
+
+.item-info  a{
+    text-decoration: none;
+    color: #050748;
+    font-size: 15px;
+    padding-right: 10px;
+}
+
+.item-info p{
+    line-height: 1.5;
+}
+
+.category-blog a{ 
+    text-decoration:none;
+    display: inline-block;
+    padding: 5px;
+    background: #fe409c;
+    color: #fff;
+}
+
+.item-info h4 a{
+    font-size: 22px;
+    font-family: Poppins;
+    line-height: 1.4;
+    font-weight: 600px;
+}
+
+.entry-blog {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.entry-blog a{
+    color: #6a6a8e;
+}

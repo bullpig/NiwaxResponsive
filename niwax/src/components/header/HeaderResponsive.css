@@ -1,0 +1,94 @@
+.mobile-nav{
+    display: none;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+@media (max-width:1024px) { 
+    .menu-navbar {
+        display: none !important;
+    }
+
+    .mobile-menu {
+        display: block;
+        padding-top: 20px;
+    }
+    
+    .nav-overlay {
+        position: fixed;
+        display: none;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        animation: fadeIn linear 0.2s;
+    }
+
+    .mobile-nav{
+        display: flex;
+        position: fixed;
+        background: #101010;
+        left: 0;
+        height: 100%;
+        overflow: hidden;
+        z-index: 9999;
+        justify-content: space-between;
+        width: 280px;
+        transform: translateX(-100%);
+        transition: linear 0.2s;
+    }
+
+    .nav-title{
+        background-color: #fff;
+        display: flex;
+        width: 280px;
+        padding-top: 7px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 5px;
+    }
+
+    .nav-title h2 {
+        font-size: 22px;
+        font-weight: 400;
+
+    }
+
+    .nav-mobile-close {
+        padding-top: 5px;
+    }
+
+    
+
+    .main-nav ul {
+        list-style-type: none;
+        padding-left: 15px;
+    }
+
+    .main-nav ul li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        left: 0;
+    }
+
+    .main-nav ul li a {
+        color: #fff;
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .menu-checkbox:checked ~ .nav-overlay {
+        display: block;
+    }
+
+    .menu-checkbox:checked ~ .mobile-nav {
+        transform: translateX(0%);
+        
+    }
+
+    
+
+}
